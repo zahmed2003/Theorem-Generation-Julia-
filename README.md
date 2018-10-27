@@ -15,7 +15,6 @@ To open an existing branch, run the command
 
     git checkout issuex
     
-   Commiting is the same as above
 
 To push your code up, run the command git status again. You will see all the files that have been changed. Run the command
 
