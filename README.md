@@ -17,11 +17,11 @@ To open an existing branch, run the command
     
    Commiting is the same as above
 
-To push your code up, run the command git status again. You will see all the files that have been changed. 
+To push your code up, run the command git status again. You will see all the files that have been changed. Run the command
 
     git add example.file 
    to all changed files.
-    Run 
+    Finally, run 
     
     git commit -m "description of changes"
     git push origin issuex   
