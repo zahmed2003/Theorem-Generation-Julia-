@@ -1,0 +1,53 @@
+import Primes
+
+function encode(s:: String)::Array{BigInt, 1}
+
+    c = split(s);
+    r = Array{BigInt}(undef, size(c));
+    index = 6;
+
+    for (i, v) in enumerate(c)
+        if(v == "=")
+            r[i] = 1;
+
+        elseif(v == "→")
+            r[i] = 2;
+
+        elseif(v == "(")
+            r[i] = 3;
+
+        elseif(v == ")")
+            r[i] = 4;
+
+        elseif(v == "¬")
+            r[i] = 5;
+
+        elseif(v == "∀")
+            r[i] = 6;
+
+        elseif(v == "∃")
+            r[i] = 7;
+
+        elseif(v == "∧")
+            r[i] = 8;
+
+        elseif(v == "∨")
+            r[i] = 9;
+
+        elseif(v == "↔")
+            r[i] = 10;
+
+        elseif(v == "∈")
+            r[i] = 11;
+
+        elseif(v == "⊥")
+            r[i] = 12;
+
+        else
+            r[i] = Primes.prime(index);
+            index = index + 1;
+        end
+    end
+
+    return r;
+end
