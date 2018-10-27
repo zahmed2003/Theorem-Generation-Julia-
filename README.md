@@ -20,7 +20,7 @@ To open an existing branch, run the command
 To push your code up, run the command git status again. You will see all the files that have been changed. 
 
     git add example.file 
-   to all changed files
+   to all changed files.
     Run 
     
     git commit -m "description of changes"
