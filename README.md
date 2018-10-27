@@ -12,12 +12,17 @@ To create a new branch, run the commands:
 After this, run git status to make sure the branch is correct.
 
 To open an existing branch, run the command
+
     git checkout issuex
     
-    Commiting is the same as above
+   Commiting is the same as above
 
 To push your code up, run the command git status again. You will see all the files that have been changed. 
-    Run the command git add example.file to every file you changed
-    Run git commit -m "description of changes"
+
+    git add example.file 
+   to all changed files
+    Run 
+    
+    git commit -m "description of changes"
     git push origin issuex   
     
