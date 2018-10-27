@@ -26,3 +26,4 @@ To push your code up, run the command git status again. You will see all the fil
     git commit -m "description of changes"
     git push origin issuex   
     
+When complete with an issue, create a pull request via. the Github website by navigating to your branch and selecting pull request. Complete the description, and request a merge to master. 
