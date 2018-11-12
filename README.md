@@ -2,6 +2,7 @@
 
 To create a new branch, run the commands:
 
+    cd Desktop
     git config --global user.email "you@example.com"
     git config --global user.name "Your Name"
 
