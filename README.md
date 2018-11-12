@@ -7,6 +7,7 @@ To create a new branch, run the commands:
     git config --global user.name "Your Name"
 
     git clone https://github.com/zahmed2003/Theorem-Generation-Julia-.git
+    cd Theorem-Generation-Julia-
 
     git checkout -b issuex
 
