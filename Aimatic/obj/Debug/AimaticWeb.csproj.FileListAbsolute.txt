@@ -1,0 +1,2 @@
+C:\Users\nagas\OneDrive\Desktop\Kyle Project 2018\Aimatic\Aimatic\obj\Debug\AimaticWeb.csprojAssemblyReference.cache
+C:\Users\nagas\OneDrive\Desktop\Kyle Project 2018\Aimatic\Aimatic\obj\Debug\AimaticWeb.csproj.CoreCompileInputs.cache

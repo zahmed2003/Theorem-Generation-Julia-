@@ -1,0 +1,648 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genesys.Framework.Models.Portable</name>
+    </assembly>
+    <members>
+        <member name="T:Genesys.Framework.Activity.ActivityModel">
+            <summary>
+            This data-only object is used by EF code-first to define the schema of the table that log Exceptions
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityModel.ActivityContextId">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityModel.IdentityUserName">
+            <summary>
+            IdentityUserName
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityModel.DeviceUuid">
+            <summary>
+            Universally Unique Id (UuId) of the device, typically the IMEI from the hardware, or DeviceId from the operating system
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityModel.ApplicationUuid">
+            <summary>
+            Universally Unique Id (UuId) of the software application, that identifies this Application + Device combination
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityModel.PrincipalIP4Address">
+            <summary>
+            PrincipalIP4Address
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityModel.StackTrace">
+            <summary>
+            StackTrace
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityModel.ActivitySqlStatement">
+            <summary>
+            ActivitySqlStatement
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityModel.ExecutingContext">
+            <summary>
+            Runtime context info, like assembly and environment info
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityModel.ModifiedDate">
+            <summary>
+            ModifiedDate
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityModel.CreatedDate">
+            <summary>
+            CreatedDate
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ActivityModel.ToString">
+            <summary>
+            Returns the typed string of the primary property.
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Activity.ExceptionModel">
+            <summary>
+            Exception information
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionModel.ExceptionLogId">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionModel.CurrentException">
+            <summary>
+            exceptionField
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionModel.Message">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionModel.InnerException">
+            <summary>
+            InnerException
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionModel.StackTrace">
+            <summary>
+            StackTrace
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionModel.CustomMessage">
+            <summary>
+            CustomMessage
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionModel.CreatedDate">
+            <summary>
+            CreatedDate
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionModel.#ctor">
+            <summary>
+            This protected constructor should not be called. Factory methods should be used instead.
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionModel.#ctor(System.Exception,System.Type,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="exception"></param>
+            <param name="concreteType"></param>
+            <param name="customMessage"></param>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionModel.ToString">
+            <summary>
+            Returns the typed string of the primary property.
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Application.CrudViewModel`1">
+            <summary>
+            ViewModel holds model and is responsible for server calls, navigation, etc.
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Application.CrudViewModel`1.#ctor(System.String)">
+            <summary>
+            Constructs a MVVM view-model that stores MyModel, MyApplication and MyWebService
+             for self-sufficient page navigation, view binding and web service calls.
+            </summary>
+            <param name="myWebServiceController">Controller name uri part to append to http://{MyWebService}/{ControllerName}</param>
+        </member>
+        <member name="M:Genesys.Framework.Application.CrudViewModel`1.CreateAsync(`0)">
+            <summary>
+            Create a record
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Application.CrudViewModel`1.ReadAsync(System.Int32)">
+            <summary>
+            Reads record based on int Id.
+            int  TModel.Id is recommended for internal, on-line, high-performance use
+            Guid TModel.Key is recommended for external, near-line, off-line use 
+            </summary>
+            <param name="id">Integer Key value that matches the record key</param>
+            <returns>If found, TModel hydrated from database. If not found, new TModel()</returns>
+        </member>
+        <member name="M:Genesys.Framework.Application.CrudViewModel`1.ReadAsync(System.Guid)">
+            <summary>
+            Reads record based on Guid Key.
+            int  TModel.Id is recommended for internal, on-line, high-performance use
+            Guid TModel.Key is recommended for external, near-line, off-line use 
+            </summary>
+            <param name="key">Integer Key value that matches the record key</param>
+            <returns>If found, TModel hydrated from database. If not found, new TModel()</returns>
+        </member>
+        <member name="M:Genesys.Framework.Application.CrudViewModel`1.ReadAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Linq.IQueryable{`0}}})">
+            <summary>
+            Reads data based on expression where clause
+            </summary>
+            <param name="whereClause">Expression for Where clause</param>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Application.CrudViewModel`1.UpdateAsync(`0)">
+            <summary>
+            Edits a record
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Application.CrudViewModel`1.DeleteAsync(`0)">
+            <summary>
+            Deletes MyModel from datastore
+            </summary>
+            <returns>True if successful delete</returns>
+        </member>
+        <member name="T:Genesys.Framework.Application.ViewModel`1">
+            <summary>
+            ViewModel holds model and is responsible for server calls, navigation, etc.
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Application.ViewModel`1.MyWebServiceController">
+            <summary>
+            Name of the Web API controller, that will become the path in the Uri
+             - ViewModelUrl = MyWebService + / + ControllerName
+             - MyWebService from AppSettings.config MyWebService element
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Application.ViewModel`1.MyApplication">
+            <summary>
+            Application context of current process
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Application.ViewModel`1.MyViewModelWebService">
+            <summary>
+            MyWebService
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Application.ViewModel`1.MyModel">
+            <summary>
+            Model data
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Application.ViewModel`1.Sender">
+            <summary>
+            Sender of main Http Verbs
+            </summary>
+        </member>
+        <member name="E:Genesys.Framework.Application.ViewModel`1.PropertyChanged">
+            <summary>
+            Property changed event handler for INotifyPropertyChanged
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Application.ViewModel`1.OnPropertyChanged(System.String)">
+            <summary>
+            Property changed event for INotifyPropertyChanged
+            </summary>
+            <param name="propertyName">String name of property</param>
+        </member>
+        <member name="E:Genesys.Framework.Application.ViewModel`1.SendBegin">
+            <summary>
+            Send is about to begin
+            </summary>
+        </member>
+        <member name="E:Genesys.Framework.Application.ViewModel`1.SendEnd">
+            <summary>
+            Send is complete
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Application.ViewModel`1.SendBeginEventHandler">
+            <summary>
+            Workflow beginning. No custom to return.
+            </summary>
+            <param name="sender">Sender of event</param>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="M:Genesys.Framework.Application.ViewModel`1.OnSendBegin">
+            <summary>
+            OnSendBegin()
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Application.ViewModel`1.OnSendEnd">
+            <summary>
+            OnSendEnd()
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Application.ViewModel`1.#ctor(System.String)">
+            <summary>
+            Constructs a MVVM view-model that stores MyModel, MyApplication and MyWebService
+             for self-sufficient page navigation, view binding and web service calls.
+            </summary>
+            <param name="myWebServiceController">Name of the Web API controller that supports this view model</param>        
+        </member>
+        <member name="P:Genesys.Framework.Application.ViewModel`1.CanGoBack">
+            <summary>
+            Can this screen go back
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Application.ViewModel`1.GoBack">
+            <summary>
+            Navigates back to previous screen
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Application.ViewModel`1.Get(System.Int32)">
+            <summary>
+            Pulls data via HttpGet passing Id
+            </summary>
+            <param name="id">Integer value of the record Id</param>
+            <returns>Single record that matches id or constructed object</returns>
+        </member>
+        <member name="M:Genesys.Framework.Application.ViewModel`1.Get(System.Guid)">
+            <summary>
+            Pulls data via HttpGet passing Id
+            </summary>
+            <param name="key">Guid value of the record key</param>
+            <returns>Single record that matches key</returns>
+        </member>
+        <member name="M:Genesys.Framework.Application.ViewModel`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Linq.IQueryable{`0}}})">
+            <summary>
+            Pulls data via HttpGet passing Id
+            </summary>
+            <param name="whereClause">Guid value of the record key</param>
+            <returns>Single record that matches key</returns>
+        </member>
+        <member name="M:Genesys.Framework.Application.ViewModel`1.GetAll">
+            <summary>
+            Pulls all data via HttpGet
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Application.ViewModel`1.GetAllExcludeDefault">
+            <summary>
+            Pulls all data via HttpGet with Id != TypeExtension.DefaultInteger, and Key != TypeExtension.DefaultGuid
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Application.ViewModel`1.Save(`0)">
+            <summary>
+            Saves this object to the database via Http Put
+            </summary>        
+            <returns>Record that was inserted or updated. Failure will result in a new TEntity() object with no data</returns>
+        </member>
+        <member name="M:Genesys.Framework.Application.ViewModel`1.Delete(`0)">
+            <summary>
+            Deletes this object from the database via Http Delete
+            </summary>
+            <returns>True for success, false for failure</returns>
+        </member>
+        <member name="T:Genesys.Framework.Data.EntityModel`1">
+            <summary>
+            ModelBase
+            </summary>
+            <remarks>ModelBase</remarks>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityModel`1.Id">
+            <summary>
+            Id of record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityModel`1.Key">
+            <summary>
+            Guid of record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityModel`1.ActivityContextId">
+            <summary>
+            Workflow activity that created this record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityModel`1.CreatedDate">
+            <summary>
+            Date record was created
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityModel`1.ModifiedDate">
+            <summary>
+            Date record was modified
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityModel`1.Status">
+            <summary>
+            Status of this record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityModel`1.IsNew">
+            <summary>
+            Is this a new object not yet committed to the database (Id == -1)
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Data.EntityModel`1.serializer">
+            <summary>
+            Serialize and Deserialize this class
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Data.EntityModel`1.validator">
+            <summary>
+            Validator providing Validate(), CanSave()
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityModel`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="E:Genesys.Framework.Data.EntityModel`1.PropertyChanged">
+            <summary>
+            Property changed event handler for INotifyPropertyChanged
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityModel`1.OnPropertyChanged(System.String)">
+            <summary>
+            Property changed event for INotifyPropertyChanged
+            </summary>
+            <param name="propertyName">String name of property</param>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityModel`1.Equals(`0)">
+            <summary>
+            Fills this object with another object's data (of the same type)
+            </summary>
+            <param name="newItem"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityModel`1.Validate">
+            <summary>
+            Serializes this object into a Json string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityModel`1.IsValid">
+            <summary>
+            De-serializes a string into this object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityModel`1.CanSave">
+            <summary>
+            De-serializes a string into this object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityModel`1.Serialize">
+            <summary>
+            Serializes this object into a Json string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityModel`1.Deserialize(System.String)">
+            <summary>
+            De-serializes a string into this object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityModel`1.ToEntity">
+            <summary>
+            Null-safe cast to the type TEntity
+            </summary>
+            <returns>This object casted to type TEntity</returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityModel`1.ToString">
+            <summary>
+            Start with Id as string representation
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityModel`1.SetField``1(``0@,``0,System.String)">
+            <summary>
+            Sets the property data as well as fired OnPropertyChanged() for INotifyPropertyChanged
+            </summary>
+            <typeparam name="TField"></typeparam>
+            <param name="field"></param>
+            <param name="value"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Genesys.Framework.Data.ValueModel`1">
+            <summary>
+            ModelBase
+            </summary>
+            <remarks>ModelBase</remarks>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueModel`1.Key">
+            <summary>
+            Guid of record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueModel`1.CreatedDate">
+            <summary>
+            Date record was created
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueModel`1.ModifiedDate">
+            <summary>
+            Date record was modified
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueModel`1.State">
+            <summary>
+            Status of this record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueModel`1.IsNew">
+            <summary>
+            Is this a new object not yet committed to the database (Id == -1)
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Data.ValueModel`1.serializer">
+            <summary>
+            Serialize and Deserialize this class
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Data.ValueModel`1.validator">
+            <summary>
+            Validator providing Validate(), CanSave()
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueModel`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="E:Genesys.Framework.Data.ValueModel`1.PropertyChanged">
+            <summary>
+            Property changed event handler for INotifyPropertyChanged
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueModel`1.OnPropertyChanged(System.String)">
+            <summary>
+            Property changed event for INotifyPropertyChanged
+            </summary>
+            <param name="propertyName">String name of property</param>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueModel`1.Equals(`0)">
+            <summary>
+            Fills this object with another object's data (of the same type)
+            </summary>
+            <param name="newItem"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueModel`1.Validate">
+            <summary>
+            Serializes this object into a Json string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueModel`1.IsValid">
+            <summary>
+            De-serializes a string into this object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueModel`1.CanSave">
+            <summary>
+            De-serializes a string into this object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueModel`1.Serialize">
+            <summary>
+            Serializes this object into a Json string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueModel`1.Deserialize(System.String)">
+            <summary>
+            De-serializes a string into this object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueModel`1.ToEntity">
+            <summary>
+            Null-safe cast to the type TValue
+            </summary>
+            <returns>This object casted to type TValue</returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueModel`1.ToString">
+            <summary>
+            Start with Id as string representation
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueModel`1.SetField``1(``0@,``0,System.String)">
+            <summary>
+            Sets the property data as well as fired OnPropertyChanged() for INotifyPropertyChanged
+            </summary>
+            <typeparam name="TField"></typeparam>
+            <param name="field"></param>
+            <param name="value"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Genesys.Framework.Data.BytesKeyModel">
+            <summary>
+            Common object across models and business entity
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Genesys.Framework.Data.BytesKeyModel.Bytes">
+            <summary>
+            Bytes of BLOB
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.BytesKeyModel.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Genesys.Framework.Data.BytesKeyModel.#ctor(System.Byte[])">
+            <summary>
+            Constructor
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Genesys.Framework.Data.ImageModel">
+            <summary>
+            Common object across models and business entity
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Genesys.Framework.Data.ImageModel.Name">
+            <summary>
+            Name of this image
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ImageModel.Bytes">
+            <summary>
+            Bytes of BLOB image
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.ImageModel.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Genesys.Framework.Data.ImageModel.#ctor(System.Byte[])">
+            <summary>
+            Constructor
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Genesys.Framework.Name.NameDescriptionModel">
+            <summary>
+            Common object across models and business entity
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Genesys.Framework.Name.NameDescriptionModel.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Name.NameDescriptionModel.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Name.NameDescriptionModel.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:Genesys.Framework.Name.NameIdModel">
+            <summary>
+            Common object across models and business entity
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Genesys.Framework.Name.NameIdModel.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Name.NameIdModel.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+    </members>
+</doc>

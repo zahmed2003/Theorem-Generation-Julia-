@@ -1,0 +1,1326 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genesys.Framework.Interop.Portable</name>
+    </assembly>
+    <members>
+        <member name="T:Genesys.Framework.Activity.IActivityContext">
+            <summary>
+            Activity record tracking the a transactional process, typically querying or committing of data.
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.IActivityContext.PrincipalIP4Address">
+            <summary>
+            IP4 Address of the process executing this activity
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.IActivityContext.ExecutingContext">
+            <summary>
+            Runtime context of this activity
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Activity.IActivityContextId">
+            <summary>
+            Activity that tracks any interaction with the framework
+            Particularly CRUD and Workflow operations.
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.IActivityContextId.ActivityContextId">
+            <summary>
+            Id of the activity that tracks a transaction type process, typically querying or committing data
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Activity.IExceptionLog">
+            <summary>
+            Exception logged record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.IExceptionLog.CustomMessage">
+            <summary>
+            Custom message from exception
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.IExceptionLog.Message">
+            <summary>
+            Full exception message
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.IExceptionLog.InnerException">
+            <summary>
+            Inner exception
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.IExceptionLog.StackTrace">
+            <summary>
+            Stack trace of the exception
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Application.IApplication">
+            <summary>
+            Global application information
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Application.IApplication.MyWebService">
+            <summary>
+            MyWebService
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Application.IApplication.ConfigurationManager">
+            <summary>
+            Configuration data, XML .config style
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Application.IFrame">
+            <summary>
+            Exposing Microsoft Internal frame interface to force consistency cross-platform
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Application.IFrame.CanGoBack">
+            <summary>
+            CanGoBack
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Application.IFrame.CanGoForward">
+            <summary>
+            CanGoForward
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Application.IFrame.GoBack">
+            <summary>
+            GoBack
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Application.IFrame.GoForward">
+            <summary>
+            GoForward
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Application.INavigateType">
+            <summary>
+            Application frame/page navigation
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Application.INavigateType.Navigate(System.Type)">
+            <summary>
+            Navigates to the specified type, typically a Wpf or Universal page
+            </summary>
+            <param name="destinationPageType">Type to navigate, typically a Wpf or Universal page</param>
+            <returns>False if navigation fails</returns>
+        </member>
+        <member name="M:Genesys.Framework.Application.INavigateType.Navigate``1(System.Type,``0)">
+            <summary>
+            Navigates to the specified type, typically a Wpf or Universal page
+            </summary>
+            <param name="destinationPageType">Type to navigate, typically a Wpf or Universal page</param>
+            <param name="dataToPass">Object to pass to the destination</param>
+            <returns>False if navigation fails</returns>
+        </member>
+        <member name="T:Genesys.Framework.Application.INavigateType`1">
+            <summary>
+            Application frame/page navigation
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Application.INavigateType`1.Navigate(System.Type,`0)">
+            <summary>
+            Navigates to the specified type, typically a Wpf or Universal page
+            </summary>
+            <param name="destinationPageType">Type to navigate, typically a Wpf or Universal page</param>
+            <param name="dataToPass">Object to pass to the destination</param>
+            <returns>False if navigation fails</returns>
+        </member>
+        <member name="T:Genesys.Framework.Application.INavigateUri">
+            <summary>
+            Application frame/page navigation
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Application.INavigateUri.Navigate(System.Uri)">
+            <summary>
+            Navigates to the specified type, typically a Wpf or Universal page
+            </summary>
+            <param name="destinationPageUrl">Type to navigate, typically a Wpf or Universal page</param>
+            <returns>False if navigation fails</returns>
+        </member>
+        <member name="M:Genesys.Framework.Application.INavigateUri.Navigate``1(System.Uri,``0)">
+            <summary>
+            Navigates to the specified type, typically a Wpf or Universal page
+            </summary>
+            <param name="destinationPageUrl">Type to navigate, typically a Wpf or Universal page</param>
+            <param name="dataToPass">Object to pass to the destination</param>
+            <returns>False if navigation fails</returns>
+        </member>
+        <member name="T:Genesys.Framework.Application.INavigateUri`1">
+            <summary>
+            Application frame/page navigation
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Application.INavigateUri`1.Navigate(System.Uri,`0)">
+            <summary>
+            Navigates to the specified type, typically a Wpf or Universal page
+            </summary>
+            <param name="destinationPageUrl">Type to navigate, typically a Wpf or Universal page</param>
+            <param name="dataToPass">Object to pass to the destination</param>
+            <returns>False if navigation fails</returns>
+        </member>
+        <member name="T:Genesys.Framework.Application.IPage">
+            <summary>
+            Screen base for authenticated users
+            </summary>    
+        </member>
+        <member name="P:Genesys.Framework.Application.IPage.MyApplication">
+            <summary>
+            Currently running application
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Application.IPage.HttpSender">
+            <summary>
+            Sender of main Http Verbs
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Application.IPage.ControllerName">
+            <summary>
+            Name of the controller used in web service calls
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Application.IPage.CurrentPage">
+            <summary>
+            Uri to currently active frame/page
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Application.IPage.ThrowExceptionOnTextOverrun">
+            <summary>
+            Throws Exception if any UI elements overrun their text max length
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Application.IPage.BindModel(System.Object)">
+            <summary>
+            Binds all model data to the screen controls and sets MyViewModel.MyModel property
+            </summary>
+            <param name="modelData">Model data to bind</param>
+        </member>
+        <member name="M:Genesys.Framework.Application.IPage.Page_Loaded(System.Object,System.EventArgs)">
+            <summary>
+            Page_Load event handler
+            </summary>
+            <param name="sender">Sender of event</param>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="T:Genesys.Framework.Application.IViewModel`1">
+            <summary>
+            Interface to enforce ViewModel division of responsibilities
+            </summary>
+            <typeparam name="TModel"></typeparam>
+        </member>
+        <member name="P:Genesys.Framework.Application.IViewModel`1.MyApplication">
+            <summary>
+            Configuration data
+             Data must be constructed in the application tier
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Application.IViewModel`1.MyModel">
+            <summary>
+            Model data
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Application.IViewModel`1.Sender">
+            <summary>
+            Sender of main Http Verbs
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.IEntitySerializable`1">
+            <summary>
+            Base used for all entity classes
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.IValue">
+            <summary>
+            Base used for all Value classes
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IValue.State">
+            <summary>
+            Status of this record with static values: 0x0 - Default, 0x1 - ReadOnly, 0x2 - Historical, 0x4 - Deleted
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.IValueSerializable`1">
+            <summary>
+            Base used for all Value classes
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.RecordStates">
+            <summary>
+            Status of the entity current state. Can be multiple values to reduce collisions and maintain independent behavior on a per-value basis.
+            Note: This is a [Flags] decorated enum. Values must be bitwise friendly (1, 2, 4, 8, 16, 32, etc.) 
+                None must be 0, and excluded from bitwise operations
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:Genesys.Framework.Data.RecordStates.Default">
+            <summary>
+            Normal behavior: Allows all querying and changes.
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Data.RecordStates.ReadOnly">
+            <summary>
+            ReadOnly/Locked: Do not allow to be changed. Ignore and log any change request. Alert calling app that record is read only (can be changed back to default to be altered later, not historical.)
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Data.RecordStates.Historical">
+            <summary>
+            Record now historical. This record can never be updated, and will now be excluded out of all re-calculations (becomes a line item to feed historical counts.)
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Data.RecordStates.Deleted">
+            <summary>
+            Deleted: This record is deleted and to be considered non-existent, even in historical re-calculations (will make historical counts shift.)
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.CodeProperty">
+            <summary>
+            Container for Code data transport and polymorphism
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.CodeProperty.Code">
+            <summary>
+            Primary key
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.IBytesKey">
+            <summary>
+            Byte array used in all BLOB objects
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IBytesKey.Bytes">
+            <summary>
+            Bytes
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.ICode">
+            <summary>
+            Code, short character-based identifier of a record. 
+             Not always ISO codes, sometimes custom or a legacy systems identifier
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ICode.Code">
+            <summary>
+            Code
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.ICreatedDate">
+            <summary>
+            Created date of the record
+            </summary>    
+        </member>
+        <member name="P:Genesys.Framework.Data.ICreatedDate.CreatedDate">
+            <summary>
+            CreatedDate
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.IdProperty">
+            <summary>
+            Container for Id data transport and polymorphism
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IdProperty.Id">
+            <summary>
+            Primary key
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.IEntity">
+            <summary>
+            Base used for all entity classes
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IEntity.IsNew">
+            <summary>
+            Is a new object, and most likely not yet committed to the database
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IEntity.ActivityContextId">
+            <summary>
+            ActivityFlowID
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IEntity.Status">
+            <summary>
+            Status of this record with static values: 0x0 - Default, 0x1 - ReadOnly, 0x2 - Historical, 0x4 - Deleted
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.IEntityKey">
+            <summary>
+            Used for cases where Entity Id needs to be carried over to Flow via interface
+            </summary>    
+        </member>
+        <member name="P:Genesys.Framework.Data.IEntityKey.EntityKey">
+            <summary>
+            EntityId
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.IId">
+            <summary>
+            Id, used in every object
+            </summary>    
+        </member>
+        <member name="P:Genesys.Framework.Data.IId.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.IKey">
+            <summary>
+            Id, used in every object
+            </summary>    
+        </member>
+        <member name="P:Genesys.Framework.Data.IKey.Key">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.IModifiedDate">
+            <summary>
+            Modified date of the record
+            </summary>    
+        </member>
+        <member name="P:Genesys.Framework.Data.IModifiedDate.ModifiedDate">
+            <summary>
+            ModifiedDate
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.KeyProperty">
+            <summary>
+            Container for Key data transport and polymorphism
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.KeyProperty.Key">
+            <summary>
+            Primary key
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Device.IApplicationUuid">
+            <summary>
+            Device Id
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Device.IApplicationUuid.ApplicationUuid">
+            <summary>
+            Universally Unique Id (UuId) of the software application, that identifies this Application + Device combination
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Device.IDeviceUuid">
+            <summary>
+            Device Id
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Device.IDeviceUuid.DeviceUuid">
+            <summary>
+            Universally Unique Id (UuId) of the device, typically the IMEI from the hardware, or DeviceId from the operating system
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Name.IName">
+            <summary>
+            Name, used in all lookup items
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Name.IName.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Name.INameCode">
+            <summary>
+            Name and code
+             Such as an ISO code and a friendly name combination
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Name.INameDescription">
+            <summary>
+            Name, Id and Description used in nearly all lookup items
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Name.INameDescription.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Name.INameId">
+            <summary>
+            Name and Id, used in all lookup records/classes
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Name.INameKey">
+            <summary>
+            Name and Id, used in all lookup records/classes
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Operation.ICreateOperation`1">
+            <summary>
+            CRUD operations
+            Create, Read, Update, Delete.
+             Purpose is to encapsulate IQueryOperation and ISaveOperationAsync for syncronous datastore access
+            </summary>
+            <typeparam name="TEntity">Type of class supporting CRUD methods</typeparam>
+        </member>
+        <member name="M:Genesys.Framework.Operation.ICreateOperation`1.Create(`0)">
+            <summary>
+            Create operation on the object
+            </summary>
+            <param name="entity">Entity to be saved to datastore</param>
+            <returns>Object pulled from datastore</returns>
+        </member>
+        <member name="M:Genesys.Framework.Operation.ICreateOperation`1.CanInsert(`0)">
+            <summary>
+            Can the entity insert to the database
+            </summary>
+            <param name="entity">Entity to be saved to datastore</param>
+            <returns>True if rules and setup allow for insert, else false</returns>
+        </member>
+        <member name="T:Genesys.Framework.Operation.ICreateOperationAsync`1">
+            <summary>
+            CRUD operations
+            Create, Read, Update, Delete.
+             Purpose is to encapsulate IQueryOperation and ISaveOperationAsync for syncronous datastore access
+            </summary>
+            <typeparam name="TEntity">Type of class supporting CRUD methods</typeparam>
+        </member>
+        <member name="M:Genesys.Framework.Operation.ICreateOperationAsync`1.CreateAsync(`0)">
+            <summary>
+            Create operation on the object
+            </summary>
+            <param name="entity">Entity to be saved to datastore</param>
+            <returns></returns>
+        </member>
+        <member name="T:Genesys.Framework.Operation.ICrudOperation`1">
+            <summary>
+            CRUD operations
+            Create, Read, Update, Delete.
+             Purpose is to encapsulate IQueryOperation and ISaveOperationAsync for syncronous datastore access
+            </summary>
+            <typeparam name="TEntity">Type of class supporting CRUD methods</typeparam>
+        </member>
+        <member name="T:Genesys.Framework.Operation.ICrudOperationAsync`1">
+            <summary>
+            CRUD operations
+            Create, Read, Update, Delete.
+             Purpose is to encapsulate IQueryOperation and ISaveOperationAsync for syncronous datastore access
+            </summary>
+            <typeparam name="TEntity">Type of class supporting CRUD methods</typeparam>
+        </member>
+        <member name="T:Genesys.Framework.Operation.IDeleteOperation`1">
+            <summary>
+            Write operation to a non-thread-safe datastore such as EF data context
+            Includes all Save() and Delete() overloads, as well as Get..() methods
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IDeleteOperation`1.Delete(`0)">
+            <summary>
+            Deletes operation on this entity
+            </summary>
+            <param name="entity">Entity to be saved to datastore</param>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IDeleteOperation`1.CanDelete(`0)">
+            <summary>
+            Can the entity deleted from the database
+            </summary>
+            <param name="entity">Entity to be deleted in the datastore</param>
+            <returns>True if rules and setup allow for delete, else false</returns>
+        </member>
+        <member name="T:Genesys.Framework.Operation.IDeleteOperationAsync`1">
+            <summary>
+            Write operation to a non-thread-safe datastore such as EF data context
+            Includes all Save() and Delete() overloads, as well as Get..() methods
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IDeleteOperationAsync`1.Delete(`0)">
+            <summary>
+            Deletes operation on this entity
+            </summary>
+            <param name="entity">Entity to be saved to datastore</param>
+        </member>
+        <member name="T:Genesys.Framework.Operation.IGetOperation`1">
+            <summary>
+            Read operations against an Async datastore, such as Http resource server
+            Both Id and Key can be used as 1-1 unique idenfiers
+             For Internal, high-performance, multi-join lookups: int Id
+             For External, low-volume tables, obfuscated, guaranteed-unique: Guid Key
+            </summary>
+            <typeparam name="TEntity">Entity type to be read</typeparam>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IGetOperation`1.GetAll">
+            <summary>
+            Gets all items from the datastore
+            Expects additional constraints to be attached by the caller
+             Usage: customer.GetAll().Where(x => x.FirstName == "Jo")
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IGetOperation`1.GetAllExcludeDefault">
+            <summary>
+            All data in this datastore subset, except records with default Id/Key
+             Criteria: Where Id != TypeExtension.DefaultInteger And Also Key != TypeExtension.DefaultGuid
+             Goal: To exclude "Not Selected" records from lookup tables
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IGetOperation`1.GetById(System.Int32)">
+            <summary>
+            Gets one or no items based on exact Id match
+            </summary>
+            <returns>One or no TEntity based on exact Id match</returns>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IGetOperation`1.GetByKey(System.Guid)">
+            <summary>
+            Gets one or no items based on exact Key match
+            </summary>
+            <returns>One or no TEntity based on exact Key match</returns>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IGetOperation`1.GetByWhere(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Get entities list by where clause
+            </summary>
+            <param name="whereClause">Where clause expression</param>
+            <returns>Roughly: Entity.Where(whereClause)</returns>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IGetOperation`1.GetByPage(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32)">
+            <summary>
+            Get entities list with paging system
+            </summary>
+            <param name="whereClause">Where clause expression</param>
+            /// <param name="orderByClause">Order by clause expression</param>
+            /// <param name="pageSize">Max number of results to be returned and in each page</param>
+            /// <param name="pageNumber">Which page to retrieve</param>
+            <returns>Roughly: Entity.Where(whereClause).OrderBy(orderByClause).Skip(pageSize*pageNumger).Take(pageSize)</returns>
+        </member>
+        <member name="T:Genesys.Framework.Operation.IGetOperationAsync`1">
+            <summary>
+            Read operations against an Async datastore, such as Http resource server
+            Both Id and Key can be used as 1-1 unique idenfiers
+             For Internal, high-performance, multi-join lookups: int Id
+             For External, low-volume tables, obfuscated, guaranteed-unique: Guid Key
+            </summary>
+            <typeparam name="TEntity">Entity type to be read</typeparam>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IGetOperationAsync`1.GetAllAsync">
+            <summary>
+            Gets all items from the datastore
+            Expects additional constraints to be attached by the caller
+             Usage: customer.GetAll().Where(x => x.FirstName == "Jo")
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IGetOperationAsync`1.GetAllExcludeDefaultAsync">
+            <summary>
+            All data in this datastore subset, except records with default Id/Key
+             Criteria: Where Id != TypeExtension.DefaultInteger And Also Key != TypeExtension.DefaultGuid
+             Goal: To exclude "Not Selected" records from lookup tables
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IGetOperationAsync`1.GetByIdAsync(System.Int32)">
+            <summary>
+            Gets one or no items based on exact Id match
+            </summary>
+            <returns>One or no TEntity based on exact Id match</returns>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IGetOperationAsync`1.GetByKeyAsync(System.Guid)">
+            <summary>
+            Gets one or no items based on exact Key match
+            </summary>
+            <returns>One or no TEntity based on exact Key match</returns>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IGetOperationAsync`1.GetByWhereAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Get entities list by where clause
+            </summary>
+            <param name="whereClause">Where clause expression</param>
+            <returns>Roughly: Entity.Where(whereClause)</returns>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IGetOperationAsync`1.GetByPageAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32)">
+            <summary>
+            Get entities list with paging system
+            </summary>
+            <param name="whereClause">Where clause expression</param>
+            /// <param name="orderByClause">Order by clause expression</param>
+            /// <param name="pageSize">Max number of results to be returned and in each page</param>
+            /// <param name="pageNumber">Which page to retrieve</param>
+            <returns>Roughly: Entity.Where(whereClause).OrderBy(orderByClause).Skip(pageSize*pageNumger).Take(pageSize)</returns>
+        </member>
+        <member name="T:Genesys.Framework.Operation.IReadOperation`1">
+            <summary>
+            CRUD operations
+            Create, Read, Update, Delete.
+             Purpose is to encapsulate IQueryOperation and ISaveOperationAsync for syncronous datastore access
+            </summary>
+            <typeparam name="TEntity">Type of class supporting CRUD methods</typeparam>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IReadOperation`1.Read(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Retrieve TEntity objects operation
+            </summary>
+            <param name="expression">Expression to query the datastore</param>
+            <returns></returns>
+        </member>
+        <member name="T:Genesys.Framework.Operation.IReadOperationAsync`1">
+            <summary>
+            CRUD operations
+            Create, Read, Update, Delete.
+             Purpose is to encapsulate IQueryOperation and ISaveOperationAsync for syncronous datastore access
+            </summary>
+            <typeparam name="TEntity">Type of class supporting CRUD methods</typeparam>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IReadOperationAsync`1.ReadAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Linq.IQueryable{`0}}})">
+            <summary>
+            Retrieve TEntity objects operation
+            </summary>
+            <param name="expression">Expression to query the datastore</param>
+            <returns></returns>
+        </member>
+        <member name="T:Genesys.Framework.Operation.ISaveOperation`1">
+            <summary>
+            Write operation to a non-thread-safe datastore such as EF data context
+            Includes all Save() and Delete() overloads, as well as Get..() methods
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Operation.ISaveOperation`1.Save(`0)">
+            <summary>
+            Inserts or Updates this object in the database
+            </summary>
+            <param name="entity">Entity to be saved to datastore</param>
+            <returns>Object updated and all current values as of the save</returns>
+        </member>
+        <member name="M:Genesys.Framework.Operation.ISaveOperation`1.CanInsert(`0)">
+            <summary>
+            Can the entity insert to the database
+            </summary>
+            <param name="entity">Entity to be saved to datastore</param>
+            <returns>True if rules and setup allow for insert, else false</returns>
+        </member>
+        <member name="M:Genesys.Framework.Operation.ISaveOperation`1.CanUpdate(`0)">
+            <summary>
+            Can the entity be updated in the database
+            </summary>
+            <param name="entity">Entity to be updated in the datastore</param>
+            <returns>True if rules and setup allow for update, else false</returns>
+        </member>
+        <member name="T:Genesys.Framework.Operation.ISaveOperationAsync`1">
+            <summary>
+            Write operation to a non-thread-safe datastore such as EF data context
+            Includes all Save() and Delete() overloads, as well as Get..() methods
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Operation.ISaveOperationAsync`1.Save(`0)">
+            <summary>
+            Inserts or Updates this object in the database
+            </summary>
+            <param name="entity">Entity to be saved to datastore</param>
+            <returns>Object updated and all current values as of the save</returns>
+        </member>
+        <member name="T:Genesys.Framework.Operation.IUpdateOperation`1">
+            <summary>
+            Update operations
+            </summary>
+            <typeparam name="TEntity">Type of class supporting CRUD methods</typeparam>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IUpdateOperation`1.Update(`0)">
+            <summary>
+            Update operation on the object
+            </summary>
+            <param name="entity">Entity to be saved to datastore</param>
+            <returns>Object pulled from datastore</returns>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IUpdateOperation`1.CanUpdate(`0)">
+            <summary>
+            Can the entity be updated in the database
+            </summary>
+            <param name="entity">Entity to be updated in the datastore</param>
+            <returns>True if rules and setup allow for update, else false</returns>
+        </member>
+        <member name="T:Genesys.Framework.Operation.IUpdateOperationAsync`1">
+            <summary>
+            CRUD operations
+            Create, Read, Update, Delete.
+             Purpose is to encapsulate IQueryOperation and ISaveOperationAsync for syncronous datastore access
+            </summary>
+            <typeparam name="TEntity">Type of class supporting CRUD methods</typeparam>
+        </member>
+        <member name="M:Genesys.Framework.Operation.IUpdateOperationAsync`1.UpdateAsync(`0)">
+            <summary>
+            Update the object
+            </summary>
+            <param name="entity">Entity to be saved to datastore</param>
+        </member>
+        <member name="T:Genesys.Framework.Security.IIdentityUserName">
+            <summary>
+            User of any system
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Security.IIdentityUserName.IdentityUserName">
+            <summary>
+            User name of the person logged in, not the principal user name of the process doing the work
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Security.IUserPrincipal">
+            <summary>
+            User of any system
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Security.UserIdentity">
+            <summary>
+            User Identity based on IPrincipal and IIdentity
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Security.UserIdentity.AuthenticationType">
+            <summary>
+             Authentication Type
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Security.UserIdentity.IsAuthenticated">
+            <summary>
+            Is Authenticated
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Security.UserIdentity.Name">
+            <summary>
+            User running process is IPrincipal.Name
+            User logged in is IIdentity.Name
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Security.UserPrincipal">
+            <summary>
+            User Identity based on IPrincipal and IIdentity
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Security.UserPrincipal.DeviceUuid">
+            <summary>
+            Universally Unique Id (UuId) of the device. Typically same as IMEI number, or DeviceId from the OS
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Security.UserPrincipal.ApplicationUuid">
+            <summary>
+            Universally Unique Id (UuId) of the software application, that identifies this Application + Device combination
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Security.UserPrincipal.EntityKey">
+            <summary>
+            Person/business submitting the request
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Security.UserPrincipal.IdentityUserName">
+            <summary>
+            Same as IdentityUserName
+            User running process is IPrincipal.Name
+            User logged in is IIdentity.Name
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Security.UserPrincipal.PrincipalUserName">
+            <summary>
+            User running process is IPrincipal.Name
+            User logged in is IIdentity.Name
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Security.UserPrincipal.ActivitySessionflowId">
+            <summary>
+            Activity tracking record of this session flow
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Security.UserPrincipal.Identity">
+            <summary>
+            Identity of requester
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Security.UserPrincipal.#ctor">
+            <summary>
+            Constructor
+            </summary> 
+        </member>
+        <member name="M:Genesys.Framework.Security.UserPrincipal.#ctor(System.String,System.Security.Principal.IIdentity)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="deviceUuid">Device requesting</param>
+            <param name="identity">Identity of user of request</param>
+        </member>
+        <member name="M:Genesys.Framework.Security.UserPrincipal.IsInRole(System.String)">
+            <summary>
+            Is In Role?
+            </summary>
+            <param name="role"></param>        
+        </member>
+        <member name="T:Genesys.Framework.Session.ISessionContext">
+            <summary>
+            Context of user, device, application for all session flows
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Session.SessionContext">
+            <summary>
+            Context identity that includes user identity info (user name), application Id and entityID
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Session.SessionContext.DeviceUuid">
+            <summary>
+            Universally Unique Id (UuId) of the device. Typically same as IMEI number, or DeviceId from the OS
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Session.SessionContext.ApplicationUuid">
+            <summary>
+            Universally Unique Id (UuId) of the software application, that identifies this Application + Device combination
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Session.SessionContext.EntityKey">
+            <summary>
+            Entity (business or person)
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Session.SessionContext.IdentityUserName">
+            <summary>
+            Name, typically user name
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Session.SessionContext.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Session.SessionContext.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="deviceUuid">Device Id sending request</param>
+            <param name="applicationUuid">Application Id sending request</param>
+            <param name="identityUserName">Name of user/authentication name sending request</param>
+        </member>
+        <member name="T:Genesys.Framework.Text.ITextMessage">
+            <summary>
+            Text interface
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Text.ITextMessage.LanguageISO">
+            <summary>
+            LanguageISO
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Text.ITextMessage.Message">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Text.TextMessage">
+            <summary>
+            Text interface
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Text.TextMessage.LanguageISO">
+            <summary>
+            LanguageISO
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Text.TextMessage.Message">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Validation.IValidationRule`1">
+            <summary>
+            Validation Rule contract
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="P:Genesys.Framework.Validation.IValidationRule`1.IsValid">
+            <summary>
+            Is this rule valid
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Validation.IValidationRule`1.HasValidated">
+            <summary>
+            Has this rule been validated
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Validation.IValidationRule`1.CanSave">
+            <summary>
+            Can save to the data store, depending on ValidationTypeTypeId != CannotSave
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Validation.IValidationRule`1.Validate(`0)">
+            <summary>
+            Validate this entity
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="P:Genesys.Framework.Validation.IValidationRule`1.ValidationRuleTypeKey">
+            <summary>
+            Type of rule, drives database behavior
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Validation.IValidationRule`1.Result">
+            <summary>
+            Result message
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Validation.IValidator`1">
+            <summary>
+            Supports self-validation, especially when data is to be persisted to the database.
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Validation.IValidator`1.BusinessRules">
+            <summary>
+            Business Rules to validate
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Validation.IValidator`1.FailedRules">
+            <summary>
+            Rules that failed validation
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Validation.IValidator`1.Validate(`0)">
+            <summary>
+            Validate all rules
+            </summary>        
+        </member>
+        <member name="M:Genesys.Framework.Validation.IValidator`1.IsValid(`0)">
+            <summary>
+            Validate all rules and return valid true/false
+            </summary>        
+        </member>
+        <member name="M:Genesys.Framework.Validation.IValidator`1.CanSave(`0)">
+            <summary>
+            Validate all rules and checks for failed BusinessRules
+            </summary>        
+        </member>
+        <member name="T:Genesys.Framework.Validation.ValidationResult">
+            <summary>
+            class containing basics of a ValidationRule, used to pull out result data from a ValidationRule
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Validation.ValidationResult.LanguageISO">
+            <summary>
+            Language to localize messages
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Validation.ValidationResult.Message">
+            <summary>
+            Validation message (localized)
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Validation.ValidationResult.#ctor(System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="message">Message to add</param>
+            <param name="languageISO">Language of message</param>
+        </member>
+        <member name="T:Genesys.Framework.Validation.ValidationRule`1">
+            <summary>
+            Self-validating rule based on Lambda expression
+            </summary>
+            <typeparam name="TEntity">Entity to validate</typeparam>
+        </member>
+        <member name="T:Genesys.Framework.Validation.ValidationRule`1.ValidationRuleTypes">
+            <summary>
+            ValidationRuleTypes static values for compile time references without needing runtime data access
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Validation.ValidationRule`1.ValidationRuleTypes.Success">
+            <summary>
+            Non destructive warning when validation fails
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Validation.ValidationRule`1.ValidationRuleTypes.Warning">
+            <summary>
+            Non destructive warning when validation fails
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Validation.ValidationRule`1.ValidationRuleTypes.InProgress">
+            <summary>
+            Failed validation allows saving of data, but record is not completed and in Work In Progress status
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Validation.ValidationRule`1.ValidationRuleTypes.Error">
+            <summary>
+            Fatal error condition
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Validation.ValidationRule`1.Property">
+            <summary>
+            Property Name to validate
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Validation.ValidationRule`1.Criteria">
+            <summary>
+            Expression of the validation query
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Validation.ValidationRule`1.ValidationRuleTypeKey">
+            <summary>
+            Type of: Errors, warnings, cant save
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Validation.ValidationRule`1.IsValid">
+            <summary>
+            Is Valid
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Validation.ValidationRule`1.HasValidated">
+            <summary>
+            Has been validated
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Validation.ValidationRule`1.CanSave">
+            <summary>
+            CanSave
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Validation.ValidationRule`1.Result">
+            <summary>
+            Text message result of this business rule, with ISO code for language
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Validation.ValidationRule`1.#ctor(System.String,System.Predicate{`0})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="propertyNameToValidate"></param>
+            <param name="validationQuery"></param>
+        </member>
+        <member name="M:Genesys.Framework.Validation.ValidationRule`1.Validate(`0)">
+            <summary>
+            Validates per predicate Lambda.
+            </summary>
+            <param name="entityToValidate"></param>
+        </member>
+        <member name="T:Genesys.Framework.Validation.Validator`1">
+            <summary>
+            Self-validating rule based on Lambda expression
+            </summary>
+            <typeparam name="TEntity">Entity to validate</typeparam>
+        </member>
+        <member name="F:Genesys.Framework.Validation.Validator`1.failedRules">
+            <summary>
+            Failed rules
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Validation.Validator`1.BusinessRules">
+            <summary>
+            Business rules to run
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Validation.Validator`1.FailedRules">
+            <summary>
+            Rules that failed validation
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Validation.Validator`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Validation.Validator`1.Validate(`0)">
+            <summary>
+            Runs all business rules
+            </summary>        
+        </member>
+        <member name="M:Genesys.Framework.Validation.Validator`1.IsValid(`0)">
+            <summary>
+            Determines if all items are valid
+            </summary>        
+        </member>
+        <member name="M:Genesys.Framework.Validation.Validator`1.HasValidated">
+            <summary>
+            Determines if all items are valid
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Validation.Validator`1.CanSave(`0)">
+            <summary>
+            Determines if any failures restrict persisting to database. Will run Validate() if has not been validated yet.
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Worker.IWorkerParameter`1">
+            <summary>
+            Parameter and data for any process
+            </summary>
+            <typeparam name="TDataIn">Type of input data for the process</typeparam>
+        </member>
+        <member name="P:Genesys.Framework.Worker.IWorkerParameter`1.Context">
+            <summary>
+            App, User, Device context
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Worker.IWorkerParameter`1.DataIn">
+            <summary>
+            Input data for the process
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Worker.IWorkerResult">
+            <summary>
+            Result of any process
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Worker.IWorkerResult.CurrentState">
+            <summary>
+            CurrentState
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Worker.IWorkerResult.OnStart">
+            <summary>
+            OnStart
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Worker.IWorkerResult.OnSuccess">
+            <summary>
+            OnSuccess
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Worker.IWorkerResult.OnFail(System.String)">
+            <summary>
+            OnFail
+            </summary>
+            <param name="errorMessage"></param>
+        </member>
+        <member name="P:Genesys.Framework.Worker.IWorkerResult.FailedRules">
+            <summary>
+            FailedRules
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Worker.IWorkerResult.ReturnId">
+            <summary>
+            Return Id - Primary Key of record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Worker.IWorkerResult.ReturnKey">
+            <summary>
+            Return Key - Guid Key for record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Worker.IWorkerResult.ReturnData">
+            <summary>
+            Serialized data to be returned to caller
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Worker.WorkerParameter`1">
+            <summary>
+            Result that passes back failed rules, and return data
+            </summary>
+            <typeparam name="TDataIn">Type of data to pass</typeparam>
+        </member>
+        <member name="P:Genesys.Framework.Worker.WorkerParameter`1.Context">
+            <summary>
+            Identity of user initiating this process
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Worker.WorkerParameter`1.DataIn">
+            <summary>
+            Data to be returned
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Worker.WorkerParameter`1.#ctor">
+            <summary>
+            Force hydration on constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Worker.WorkerParameter`1.#ctor(`0)">
+            <summary>
+            Constructor that partially hydrates
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Worker.WorkerParameter`1.#ctor(Genesys.Framework.Security.UserPrincipal,`0)">
+            <summary>
+            Constructor that fully hydrates
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Worker.WorkerParameter`1.#ctor(Genesys.Framework.Session.ISessionContext,`0)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="context">User, device and app context</param>
+            <param name="data">Data to send</param>
+        </member>
+        <member name="T:Genesys.Framework.Worker.WorkerResult">
+            <summary>
+            Result that passes back failed rules, and return data
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Worker.WorkerResult.CurrentState">
+            <summary>
+            Current state of the process
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Worker.WorkerResult.FailedRules">
+            <summary>
+            Errors
+            </summary>
+            <value></value>        
+        </member>
+        <member name="P:Genesys.Framework.Worker.WorkerResult.ReturnId">
+            <summary>
+            Id to be returned to caller
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Worker.WorkerResult.ReturnKey">
+            <summary>
+            Key to be returned to caller
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Worker.WorkerResult.ReturnData">
+            <summary>
+            Serialized data to be returned to caller
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Worker.WorkerResult.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Worker.WorkerResult.RuleFailed(Genesys.Framework.Validation.ValidationResult)">
+            <summary>
+            Adds to failed rules from a valid IValidationRule or IValidationResult
+            </summary>
+            <param name="validatable"></param>
+        </member>
+        <member name="M:Genesys.Framework.Worker.WorkerResult.RuleFailed(System.String)">
+            <summary>
+            Adds a failed rule message that does not have access to a full IValidationRule or IValidationResult
+            </summary>
+            <param name="resultMessageWithNoValidationRule"></param>
+        </member>
+        <member name="M:Genesys.Framework.Worker.WorkerResult.OnStart">
+            <summary>
+            Starts a process
+            </summary>        
+        </member>
+        <member name="M:Genesys.Framework.Worker.WorkerResult.OnFail(System.String)">
+            <summary>
+            Records failure of a process
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Worker.WorkerResult.OnSuccess">
+            <summary>
+            Finalizes a process
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Worker.WorkerStates">
+            <summary>
+            States of a an operation that does work
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Worker.WorkerStates.NeverRan">
+            <summary>
+            Process never executed
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Worker.WorkerStates.Pending">
+            <summary>
+            Process is pending execution
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Worker.WorkerStates.Running">
+            <summary>
+            Process is currently running
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Worker.WorkerStates.OnHold">
+            <summary>
+            Process is pending execution
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Worker.WorkerStates.Completed">
+            <summary>
+            Process completed with no errors
+            </summary>
+        </member>
+    </members>
+</doc>

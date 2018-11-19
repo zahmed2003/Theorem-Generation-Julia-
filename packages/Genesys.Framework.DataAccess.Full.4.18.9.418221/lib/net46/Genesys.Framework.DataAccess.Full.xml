@@ -1,0 +1,1481 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genesys.Framework.DataAccess.Full</name>
+    </assembly>
+    <members>
+        <member name="T:Genesys.Framework.Activity.ActivityContext">
+            <summary>
+            This data-only object is used by EF code-first to define the schema of the table that log Exceptions
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityContext.ActivityContextId">
+            <summary>
+            Integer Id of this record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityContext.ActivityContextKey">
+            <summary>
+            Guid Id of this record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityContext.CreatedDate">
+            <summary>
+            Date record was created
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityContext.ModifiedDate">
+            <summary>
+            Date record was modified
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityContext.IdentityUserName">
+            <summary>
+            IdentityUserName
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityContext.DeviceUuid">
+            <summary>
+            Universally Unique Id (UuId) of the device, typically the IMEI from the hardware, or DeviceId from the operating system
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityContext.ApplicationUuid">
+            <summary>
+            Universally Unique Id (UuId) of the software application, that identifies this Application + Device combination
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityContext.PrincipalIP4Address">
+            <summary>
+            PrincipalIP4Address
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityContext.StackTrace">
+            <summary>
+            StackTrace
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityContext.ActivitySqlStatement">
+            <summary>
+            ActivitySqlStatement
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityContext.ExecutingContext">
+            <summary>
+            Runtime context info, like assembly and environment info
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ActivityContext.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ActivityContext.ExecutingContextInfo">
+            <summary>
+            Builds runtime context in the format of: Assembly FQN || Executing location || Machine Name - Domain\User
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ActivityContext.ToString">
+            <summary>
+            Returns the typed string of the primary property.
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Activity.ExceptionLog">
+            <summary>
+            This data-only object is used by EF code-first to define the schema of the table that log Exceptions
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLog.ExceptionLogId">
+            <summary>
+            Integer Id of this record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLog.ExceptionLogKey">
+            <summary>
+            Guid Id of this record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLog.CreatedDate">
+            <summary>
+            Date record was created
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLog.CurrentException">
+            <summary>
+            exceptionField
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLog.Message">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLog.InnerException">
+            <summary>
+            InnerException
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLog.StackTrace">
+            <summary>
+            StackTrace
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLog.CustomMessage">
+            <summary>
+            CustomMessage
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLog.ActivityContextId">
+            <summary>
+            The Activity record that was processing when this exception occurred
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLog.MachineName">
+            <summary>
+            MachineName
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLog.ADDomainName">
+            <summary>
+            ADDomainName
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLog.ADUserName">
+            <summary>
+            ADUserName
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLog.DirectoryWorking">
+            <summary>
+            DirectoryWorking
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLog.DirectoryAssembly">
+            <summary>
+            DirectoryAssembly
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLog.AssemblyName">
+            <summary>
+            ApplicationName
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLog.URL">
+            <summary>
+            URL
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionLog.#ctor">
+            <summary>
+            Contructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionLog.#ctor(System.Exception,System.Type,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="exception"></param>
+            <param name="concreteType"></param>
+            <param name="customMessage"></param>
+        </member>
+        <member name="T:Genesys.Framework.Activity.ActivityContextReader">
+            <summary>
+            Data context for ActivityContext class
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityContextReader.Data">
+            <summary>
+            Data set DbSet class that gets/saves the entity.
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ActivityContextReader.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ActivityContextReader.GetAll">
+            <summary>
+            Loads an existing object based on Id.
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ActivityContextReader.GetById(System.Int32)">
+            <summary>
+            Loads an existing object based on Id.
+            </summary>
+            <param name="id">The unique Id of the object</param>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ActivityContextReader.GetByKey(System.Guid)">
+            <summary>
+            Loads an existing object based on Id.
+            </summary>
+            <param name="key">The unique Guid Id of the object</param>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ActivityContextReader.ConnectionStringGet">
+            <summary>
+            Gets connection strings from connectionstrings.config
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ActivityContextReader.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            Set values when creating a model in the database
+            </summary>
+            <param name="modelBuilder"></param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Genesys.Framework.Activity.ActivityContextReader.DatabaseInitializer">
+            <summary>
+            Initializes database for Code First classes
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ActivityContextReader.DatabaseInitializer.Seed(Genesys.Framework.Activity.ActivityContextReader)">
+            <summary>
+            Sets default data
+            </summary>
+            <param name="context">User, device and app context</param>
+        </member>
+        <member name="T:Genesys.Framework.Activity.ActivityContextWriter">
+            <summary>
+            Data context for ActivityContext class
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ActivityContextWriter.Data">
+            <summary>
+            Data set DbSet class that gets/saves the entity.
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ActivityContextWriter.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ActivityContextWriter.Create">
+            <summary>
+            Fills and saves an activity
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ActivityContextWriter.Save(Genesys.Framework.Activity.ActivityContext)">
+            <summary>
+            Saves object to database
+            Silent errors, as this is an 100% uptime object
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ActivityContextWriter.ConnectionStringGet">
+            <summary>
+            Gets connection strings from connectionstrings.config
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ActivityContextWriter.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            Set values when creating a model in the database
+            </summary>
+            <param name="modelBuilder"></param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Genesys.Framework.Activity.ActivityContextWriter.DatabaseInitializer">
+            <summary>
+            Initializes database for Code First classes
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ActivityContextWriter.DatabaseInitializer.Seed(Genesys.Framework.Activity.ActivityContextWriter)">
+            <summary>
+            Sets default data
+            </summary>
+            <param name="context">User, device and app context</param>
+        </member>
+        <member name="T:Genesys.Framework.Activity.ExceptionLogReader">
+            <summary>
+            Data context for ExceptionLog class
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLogReader.Data">
+            <summary>
+            Data set DbSet class that gets/saves the entity.
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionLogReader.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionLogReader.GetAll">
+            <summary>
+            Loads an existing object based on Id.
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionLogReader.GetById(System.Int32)">
+            <summary>
+            Loads an existing object based on Id.
+            </summary>
+            <param name="id">The unique Id of the object</param>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionLogReader.GetByKey(System.Guid)">
+            <summary>
+            Loads an existing object based on Id.
+            </summary>
+            <param name="key">The unique Guid Id of the object</param>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionLogReader.ConnectionStringGet">
+            <summary>
+            Gets connection strings from connectionstrings.config
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionLogReader.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            Set values when creating a model in the database
+            </summary>
+            <param name="modelBuilder"></param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Genesys.Framework.Activity.ExceptionLogReader.DatabaseInitializer">
+            <summary>
+            Initializes database for Code First classes
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionLogReader.DatabaseInitializer.Seed(Genesys.Framework.Activity.ExceptionLogReader)">
+            <summary>
+            Sets default data
+            </summary>
+            <param name="context">User, device and app context</param>
+        </member>
+        <member name="T:Genesys.Framework.Activity.ExceptionLogWriter">
+            <summary>
+            Data context for ExceptionLog class
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Activity.ExceptionLogWriter.Data">
+            <summary>
+            Data set DbSet class that gets/saves the entity.
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionLogWriter.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionLogWriter.Create(System.Exception,System.Type,System.String)">
+            <summary>
+            Hydrates object and saves the log record
+            </summary>
+            <param name="exception">System.Exception object to log</param>
+            <param name="concreteType">Type that is logging the exception</param>
+            <param name="customMessage">Custom message to append to the exception log</param>
+            <returns>Id if successfull, -1 if not.</returns>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionLogWriter.Save(Genesys.Framework.Activity.ExceptionLog)">
+            <summary>
+            Saves object to database
+            Silent errors, as this is an 100% uptime object
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionLogWriter.ConnectionStringGet">
+            <summary>
+            Gets connection strings from connectionstrings.config
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionLogWriter.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            Set values when creating a model in the database
+            </summary>
+            <param name="modelBuilder"></param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Genesys.Framework.Activity.ExceptionLogWriter.DatabaseInitializer">
+            <summary>
+            Initializes database for Code First classes
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Activity.ExceptionLogWriter.DatabaseInitializer.Seed(Genesys.Framework.Activity.ExceptionLogWriter)">
+            <summary>
+            Sets default data
+            </summary>
+            <param name="context">User, device and app context</param>
+        </member>
+        <member name="T:Genesys.Framework.Data.EntityDefaultAdapter`1">
+            <summary>
+            EF to SQL View for this object
+            </summary>
+            <summary>
+            EF to SQL View for this object
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityDefaultAdapter`1.ConnectionName">
+            <summary>
+            Connection String Name (key) to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityDefaultAdapter`1.DatabaseSchema">
+            <summary>
+            Schema to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityDefaultAdapter`1.TableName">
+            <summary>
+            Schema to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityDefaultAdapter`1.ColumnPrefix">
+            <summary>
+            Schema to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityDefaultAdapter`1.DataConcurrency">
+            <summary>
+            Schema to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityDefaultAdapter`1.DataAccessBehavior">
+            <summary>
+            Data access behavior of this instance.
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityDefaultAdapter`1.RowsAffected">
+            <summary>
+            Number of rows affected by any operation
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityDefaultAdapter`1.IgnoredTypes">
+            <summary>
+            OnModelCreating types to ignore
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityDefaultAdapter`1.IgnoredProperties">
+            <summary>
+            Properties to ignore in the database mapping
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityDefaultAdapter`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityDefaultAdapter`1.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityDefaultAdapter`1.Initialize">
+            <summary>
+            Init settings controlled by Attributes
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityDefaultAdapter`1.DataConcurrencyGet(Genesys.Extras.Data.DataConcurrencies)">
+            <summary>
+            Concurrency model to follow in middle tier, and optionally in the data tier
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityDefaultAdapter`1.DataAccessBehaviorGet">
+            <summary>
+            Defines if object can select, insert, update and/or delete.
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityDefaultAdapter`1.ConnectionString">
+            <summary>
+            Connection string as read from the config file, or passed as a constructor parameter
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.EntityInfo`1">
+            <summary>
+            ReadEntityBase
+            </summary>
+            <remarks>ReadEntityBase</remarks>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityInfo`1.Id">
+            <summary>
+            Id of record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityInfo`1.Key">
+            <summary>
+            Guid of record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityInfo`1.ActivityContextId">
+            <summary>
+            Workflow activity that created this record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityInfo`1.CreatedDate">
+            <summary>
+            Date record was created
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityInfo`1.ModifiedDate">
+            <summary>
+            Date record was modified
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityInfo`1.Status">
+            <summary>
+            Status of this record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.EntityInfo`1.IsNew">
+            <summary>
+            Is this a new object not yet committed to the database (Id == -1)
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Data.EntityInfo`1.serializer">
+            <summary>
+            Serialize and Deserialize this class
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Data.EntityInfo`1.validator">
+            <summary>
+            Validator providing Validate(), CanSave()
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityInfo`1.#ctor">
+            <summary>
+            Forces initialization of EF-generated properties (PropertyValue = TypeExtension.Default{Type})
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityInfo`1.Equals(`0)">
+            <summary>
+            Fills this object with another object's data (of the same type)
+            </summary>
+            <param name="newItem"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityInfo`1.Validate">
+            <summary>
+            Serializes this object into a Json string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityInfo`1.IsValid">
+            <summary>
+            De-serializes a string into this object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityInfo`1.CanSave">
+            <summary>
+            Validator-driven evaluation of if this object can be inserted, updated or delete
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityInfo`1.Serialize">
+            <summary>
+            Serializes this object into a Json string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityInfo`1.Deserialize(System.String)">
+            <summary>
+            De-serializes a string into this object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityInfo`1.ToEntity">
+            <summary>
+            Null-safe cast to the type TEntity
+            </summary>
+            <returns>This object casted to type TEntity</returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityInfo`1.ToString">
+            <summary>
+            Start with Id as string representation
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Genesys.Framework.Data.IEntityAdapter`1">
+            <summary>
+            Database connection and metadata info
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IEntityAdapter`1.DatabaseSchema">
+            <summary>
+            Schema to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IEntityAdapter`1.ConnectionName">
+            <summary>
+            Connection String Name (key only) to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IEntityAdapter`1.ConnectionString">
+            <summary>
+            Connection String (full string) to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IEntityAdapter`1.TableName">
+            <summary>
+            Table this configuration will interact
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IEntityAdapter`1.ColumnPrefix">
+            <summary>
+            Prefix for all table columns. 
+             Default/No prefix: Property names must  match the column like Id, Key, FirstName 
+             Prefix provided is applied to all: CustomerId, CustomerKey, CustomerFirstName
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IEntityAdapter`1.DataConcurrency">
+            <summary>
+            Schema to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IEntityAdapter`1.DataAccessBehavior">
+            <summary>
+            Data access behavior of this instance.
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IEntityAdapter`1.RowsAffected">
+            <summary>
+            Rows affected by any adapter operation
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IEntityAdapter`1.IgnoredTypes">
+            <summary>
+            List of types to ignore in database operations
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IEntityAdapter`1.IgnoredProperties">
+            <summary>
+            Properties to ignore in the database mapping
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.IValueAdapter`1">
+            <summary>
+            Database connection and metadata info
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IValueAdapter`1.DatabaseSchema">
+            <summary>
+            Schema to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IValueAdapter`1.ConnectionName">
+            <summary>
+            Connection String Name (key) to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IValueAdapter`1.ConnectionString">
+            <summary>
+            Connection String Name (key) to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IValueAdapter`1.TableName">
+            <summary>
+            Table this configuration will interact
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IValueAdapter`1.ColumnPrefix">
+            <summary>
+            Prefix for all table columns. 
+             Default/No prefix: Property names must  match the column like Id, Key, FirstName 
+             Prefix provided is applied to all: CustomerId, CustomerKey, CustomerFirstName
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IValueAdapter`1.DataConcurrency">
+            <summary>
+            Schema to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IValueAdapter`1.DataAccessBehavior">
+            <summary>
+            Data access behavior of this instance.
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IValueAdapter`1.IgnoredTypes">
+            <summary>
+            List of types to ignore in database operations
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.IValueAdapter`1.IgnoredProperties">
+            <summary>
+            Properties to ignore in the database mapping
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.StoredProcedure`1">
+            <summary>
+            Stored Procedure for entity class
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="P:Genesys.Framework.Data.StoredProcedure`1.DatabaseSchema">
+            <summary>
+            Schema to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.StoredProcedure`1.StoredProcedureName">
+            <summary>
+            Name of the stored procedure to execute
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.StoredProcedure`1.Parameters">
+            <summary>
+            Parameter array for stored procedure
+            I.e. { new SqlParameter("fromDate", fromDate), new SqlParameter("toDate", toDate) }
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.StoredProcedure`1.SqlPrefix">
+            <summary>
+            Represents the prefix to the EF call .FromSql(tSqlPrefix, parameters)
+             Parameter names are included.
+             Parameter values are not included.
+             I.e. "EXECUTE MySchema.MySPName @Param1 @Param2"
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.StoredProcedure`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.StoredProcedure`1.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="storedProcedure">I.e. "RecordsByDateRange"</param>
+        </member>
+        <member name="M:Genesys.Framework.Data.StoredProcedure`1.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Data.SqlClient.SqlParameter})">
+            <summary>
+            Automatically constructs T-SQL based on passed names and objects
+            </summary>
+            <param name="storedPrococedure">I.e. "RecordsByDateRange"</param>
+            <param name="parameters">I.e. { new SqlParameter("fromDate", fromDate), new SqlParameter("toDate", toDate) }</param>
+        </member>
+        <member name="M:Genesys.Framework.Data.StoredProcedure`1.MergeParameters(System.Collections.Generic.IEnumerable{System.Data.SqlClient.SqlParameter})">
+            <summary>
+            Merges a range of parameters
+            </summary>
+            <param name="newParams"></param>
+        </member>
+        <member name="M:Genesys.Framework.Data.StoredProcedure`1.GenerateSqlStatement">
+            <summary>
+            Rebuilds sqlPrefix and sqlStatement private fields
+            </summary>
+            <returns>Fully-formed sqlStatement value</returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.StoredProcedure`1.ToString">
+            <summary>
+            T-SQL string to execute.
+            I.e. "EXECUTE dbo.RecordsByDateRange @fromDate, @toDate"
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.StoredProcedure`1.RequiresQuote(System.Data.SqlDbType)">
+            <summary>
+            Determines if requires quote for SQL Statement
+            </summary>
+            <param name="type">SqlDbType to evaluate</param>
+            <returns>True if requires a single quote (')</returns>
+        </member>
+        <member name="T:Genesys.Framework.Data.StoredProcedureEntity`1">
+            <summary>
+             StoredProcedureEntity - C-UD operations of an entity against stored procedures
+              Read remains EntityReader centric
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.StoredProcedureEntity`1.CreateStoredProcedure">
+            <summary>
+            Stored procedure that creates the entity
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.StoredProcedureEntity`1.UpdateStoredProcedure">
+            <summary>
+            Stored procedure that updates the entity
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.StoredProcedureEntity`1.DeleteStoredProcedure">
+            <summary>
+            Stored procedure that deletes the entity
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.ValueDefaultAdapter`1">
+            <summary>
+            EF to SQL View for this object
+            </summary>
+            <summary>
+            EF to SQL View for this object
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueDefaultAdapter`1.ConnectionName">
+            <summary>
+            Connection String Name (key) to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueDefaultAdapter`1.DatabaseSchema">
+            <summary>
+            Schema to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueDefaultAdapter`1.TableName">
+            <summary>
+            Schema to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueDefaultAdapter`1.ColumnPrefix">
+            <summary>
+            Schema to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueDefaultAdapter`1.DataConcurrency">
+            <summary>
+            Schema to be used for this object's data access
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueDefaultAdapter`1.DataAccessBehavior">
+            <summary>
+            Data access behavior of this instance.
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueDefaultAdapter`1.IgnoredTypes">
+            <summary>
+            OnModelCreating types to ignore
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueDefaultAdapter`1.IgnoredProperties">
+            <summary>
+            Properties to ignore in the database mapping
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueDefaultAdapter`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueDefaultAdapter`1.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueDefaultAdapter`1.DataConcurrencyGet(Genesys.Extras.Data.DataConcurrencies)">
+            <summary>
+            Concurrency model to follow in middle tier, and optionally in the data tier
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueDefaultAdapter`1.DataAccessBehaviorGet">
+            <summary>
+            Defines if object can select, insert, update and/or delete.
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueDefaultAdapter`1.ConnectionString">
+            <summary>
+            Connection string as read from the config file, or passed as a constructor parameter
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Data.ImageEntity`1">
+            <summary>
+            Base DAO class for tables containing image column
+            Separates the heavy image column into its own object
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ImageEntity`1.Empty">
+            <summary>
+            1x1px transparent image
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ImageEntity`1.Bytes">
+            <summary>
+            Byte array with data
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ImageEntity`1.Image">
+            <summary>
+            Image of the Bytes data
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ImageEntity`1.ContentType">
+            <summary>
+            Gets dynamic content type of the Bytes data
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.ImageEntity`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.ImageEntity`1.#ctor(System.Byte[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="imageBytes">Data to save</param>
+        </member>
+        <member name="M:Genesys.Framework.Data.ImageEntity`1.ToSize(System.Int32)">
+            <summary>
+            Sizes based on height only, will use multiplier to calculate proper width
+            </summary>
+            <param name="newHeight">New height (width is auto)</param>
+        </member>
+        <member name="M:Genesys.Framework.Data.ImageEntity`1.ToSize(System.Drawing.Size)">
+            <summary>
+            Resizes an image and stretches if ratio is wrong
+            </summary>
+            <param name="newSize">New height and width</param>
+        </member>
+        <member name="M:Genesys.Framework.Data.ImageEntity`1.ToThumbnail">
+            <summary>
+            Converts to a lightweight thumbnail
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.ImageEntity`1.ToThumbnailInUpperLeftCorner(System.Int32,System.Int32)">
+            <summary>
+            Puts a thumbnail in upper left corner
+            </summary>
+            <param name="width">Width in px</param>
+            <param name="height">Height in px</param>
+        </member>
+        <member name="M:Genesys.Framework.Data.ImageEntity`1.EmptyCallBack">
+            <summary>
+            Required for ToThumbnail
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.ImageEntity`1.Crop(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Crops an x,y for the area of width, height
+            </summary>
+            <param name="width">Width in px</param>
+            <param name="height">Height in px</param>
+            <param name="x">Starting X</param>
+            <param name="y">Starting Y</param>
+        </member>
+        <member name="T:Genesys.Framework.Data.ValueInfo`1">
+            <summary>
+            ReadValueBase
+            </summary>
+            <remarks>ReadValueBase</remarks>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueInfo`1.Key">
+            <summary>
+            Guid of record
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueInfo`1.CreatedDate">
+            <summary>
+            Date record was created
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueInfo`1.ModifiedDate">
+            <summary>
+            Date record was modified
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Data.ValueInfo`1.State">
+            <summary>
+            Status of this record
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Data.ValueInfo`1.serializer">
+            <summary>
+            Serialize and Deserialize this class
+            </summary>
+        </member>
+        <member name="F:Genesys.Framework.Data.ValueInfo`1.validator">
+            <summary>
+            Validator providing Validate(), CanSave()
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueInfo`1.#ctor">
+            <summary>
+            Forces initialization of EF-generated properties (PropertyValue = TypeExtension.Default{Type})
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueInfo`1.Equals(`0)">
+            <summary>
+            Fills this object with another object's data (of the same type)
+            </summary>
+            <param name="newItem"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueInfo`1.Validate">
+            <summary>
+            Serializes this object into a Json string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueInfo`1.IsValid">
+            <summary>
+            De-serializes a string into this object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueInfo`1.CanSave">
+            <summary>
+            De-serializes a string into this object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueInfo`1.Serialize">
+            <summary>
+            Serializes this object into a Json string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueInfo`1.Deserialize(System.String)">
+            <summary>
+            De-serializes a string into this object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueInfo`1.ToValue">
+            <summary>
+            Null-safe cast to the type TValue
+            </summary>
+            <returns>This object casted to type TValue</returns>
+        </member>
+        <member name="M:Genesys.Framework.Data.ValueInfo`1.ToString">
+            <summary>
+            Start with Id as string representation
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Genesys.Framework.Data.EntityWriteAdapter`1">
+            <summary>
+            EF to Table adapter
+            Table conventions assume:
+             Columns are {ColumnPrefix}Id, {ColumnPrefix}Key, {ColumnPrefix}Type, etc.
+             Override with attributes: [TableName()], [ColumnPrefix()]
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityWriteAdapter`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Data.EntityWriteAdapter`1.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Genesys.Framework.Repository.EntityReader`1">
+            <summary>
+            EF DbContext for read-only GetBy* operations
+            </summary>
+            <summary>
+            EF DbContext for read-only GetBy* operations
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Repository.EntityReader`1.DatabaseAdapter">
+            <summary>
+            Configuration class for dbContext options
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Repository.EntityReader`1.Results">
+            <summary>
+            Results from any query operation
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Repository.EntityReader`1.CanConnect">
+            <summary>
+            Can connect to database?
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Repository.EntityReader`1.ThrowException">
+            <summary>s
+            Class will throw exception if encountered
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityReader`1.#ctor(Genesys.Framework.Data.IEntityAdapter{`0})">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityReader`1.GetAll">
+            <summary>
+            All data in this datastore subset
+             Can add clauses, such as GetAll().Take(1), GetAll().Where(), etc.
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityReader`1.GetAllExcludeDefault">
+            <summary>
+            All data in this datastore subset, except records with default Id/Key
+             Criteria: Where Id != TypeExtension.DefaultInteger And Also Key != TypeExtension.DefaultGuid
+             Goal: To exclude "Not Selected" records from lookup tables
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityReader`1.GetById(System.Int32)">
+            <summary>
+            Gets database record with exact Id match
+            </summary>
+            <param name="id">Database Id of the record to pull</param>
+            <returns>Single entity that matches by id, or an empty entity for not found</returns>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityReader`1.GetByKey(System.Guid)">
+            <summary>
+            Gets database record with exact Key match
+            </summary>
+            <param name="key">Database Key of the record to pull</param>
+            <returns>Single entity that matches by Key, or an empty entity for not found</returns>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityReader`1.GetByWhere(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Retrieves data with purpose of displaying results over multiple pages (i.e. in Grid/table)
+            </summary>
+            <param name="whereClause">Expression for where clause</param>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityReader`1.GetByPage(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32)">
+            <summary>
+            Retrieves data with purpose of displaying results over multiple pages (i.e. in Grid/table)
+            </summary>
+            <param name="whereClause">Expression for where clause</param>
+            <param name="orderByClause">Expression for order by clause</param>
+            <param name="pageSize">Size of each result</param>
+            <param name="pageNumber">Page number</param>
+            <returns></returns>
+        </member>
+        <member name="P:Genesys.Framework.Repository.EntityReader`1.Data">
+            <summary>
+            Data set DbSet class that gets/saves the entity.
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityReader`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityReader`1.#ctor(System.String)">
+            <summary>
+            Constructor. Explicitly set database connection.
+            </summary>
+            <param name="connectionString">Connection String to be used for this object data access</param>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityReader`1.ConnectionStringGet">
+            <summary>
+            Gets connection strings from connectionstrings.config
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityReader`1.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            Set values when creating a model in the database
+            </summary>
+            <param name="modelBuilder"></param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Genesys.Framework.Repository.EntityWriter`1">
+            <summary>
+            EF DbContext for read-only GetBy* operations
+            </summary>
+            <summary>
+            EF DbContext for read-only GetBy* operations
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Repository.EntityWriter`1.DatabaseAdapter">
+            <summary>
+            Configuration class for dbContext options
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Repository.EntityWriter`1.ThrowException">
+            <summary>
+            Class will throw exception if encountered
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Repository.EntityWriter`1.CanConnect">
+            <summary>
+            Can connect to database?
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityWriter`1.Save(`0,Genesys.Framework.Activity.IActivityContext)">
+            <summary>
+            Inserts or Updates this object with Workflow-based tracking.
+            </summary>  
+            <param name="entity">TEntity entity to commit to data storage</param>
+            <param name="activity">Activity record owning this process</param>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityWriter`1.CanInsert(`0)">
+            <summary>
+            Can the entity insert to the database
+            </summary>
+            <param name="entity">Entity to be saved to datastore</param>
+            <returns>True if rules and setup allow for insert, else false</returns>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityWriter`1.CanUpdate(`0)">
+            <summary>
+            Can the entity be updated in the database
+            </summary>
+            <param name="entity">Entity to be updated in the datastore</param>
+            <returns>True if rules and setup allow for update, else false</returns>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityWriter`1.CanDelete(`0)">
+            <summary>
+            Can the entity deleted from the database
+            </summary>
+            <param name="entity">Entity to be deleted in the datastore</param>
+            <returns>True if rules and setup allow for delete, else false</returns>
+        </member>
+        <member name="P:Genesys.Framework.Repository.EntityWriter`1.Data">
+            <summary>
+            Data set DbSet class that gets/saves the entity.
+                Note: EF requires public get/set
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityWriter`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityWriter`1.#ctor(System.String)">
+            <summary>
+            Constructor. Explicitly set database connection.
+            </summary>
+            <param name="connectionString">Connection String to be used for this object data access</param>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityWriter`1.Save(`0)">
+            <summary>
+            Worker that saves this object with automatic tracking.
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityWriter`1.Delete(`0)">
+            <summary>
+            Worker that deletes this object with automatic tracking
+            </summary>      
+            <returns>True if record deleted, false if not</returns>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityWriter`1.ConnectionStringGet">
+            <summary>
+            Gets connection strings from connectionstrings.config
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityWriter`1.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            Set values when creating a model in the database
+            </summary>
+            <param name="modelBuilder"></param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Genesys.Framework.Repository.EntityWriter`1.DatabaseInitializer">
+            <summary>
+            Initializes database for Code First classes
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.EntityWriter`1.DatabaseInitializer.Seed(Genesys.Framework.Repository.EntityWriter{`0})">
+            <summary>
+            Sets default data
+            </summary>
+            <param name="context">User, device and app context</param>
+        </member>
+        <member name="T:Genesys.Framework.Repository.StoredProcedureWriter`1">
+            <summary>
+            EF DbContext for read-only GetBy* operations
+            </summary>
+            <summary>
+            EF DbContext for read-only GetBy* operations
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Repository.StoredProcedureWriter`1.DatabaseAdapter">
+            <summary>
+            Configuration class for dbContext options
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Repository.StoredProcedureWriter`1.ThrowException">
+            <summary>
+            Class will throw exception if encountered
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Repository.StoredProcedureWriter`1.CanConnect">
+            <summary>
+            Can connect to database?
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.StoredProcedureWriter`1.CanInsert(`0)">
+            <summary>
+            Can the entity insert to the database
+            </summary>
+            <param name="entity">Entity to be saved to datastore</param>
+            <returns>True if rules and setup allow for insert, else false</returns>
+        </member>
+        <member name="M:Genesys.Framework.Repository.StoredProcedureWriter`1.CanUpdate(`0)">
+            <summary>
+            Can the entity be updated in the database
+            </summary>
+            <param name="entity">Entity to be updated in the datastore</param>
+            <returns>True if rules and setup allow for update, else false</returns>
+        </member>
+        <member name="M:Genesys.Framework.Repository.StoredProcedureWriter`1.CanDelete(`0)">
+            <summary>
+            Can the entity deleted from the database
+            </summary>
+            <param name="entity">Entity to be deleted in the datastore</param>
+            <returns>True if rules and setup allow for delete, else false</returns>
+        </member>
+        <member name="P:Genesys.Framework.Repository.StoredProcedureWriter`1.Data">
+            <summary>
+            Data set DbSet class that gets/saves the entity.
+                Note: EF requires public get/set
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.StoredProcedureWriter`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.StoredProcedureWriter`1.#ctor(System.String)">
+            <summary>
+            Constructor. Explicitly set database connection.
+            </summary>
+            <param name="connectionString">Connection String to be used for this object data access</param>
+        </member>
+        <member name="M:Genesys.Framework.Repository.StoredProcedureWriter`1.Create(`0)">
+            <summary>
+            Create operation on the object
+            </summary>
+            <param name="entity">Entity to be saved to datastore</param>
+            <returns>Object pulled from datastore</returns>
+        </member>
+        <member name="M:Genesys.Framework.Repository.StoredProcedureWriter`1.Read(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Retrieve TEntity objects operation
+            Default: Does Not read from a Get stored procedure.
+             Reads directly from DbSet defined in repository class. 
+            </summary>
+            <param name="expression">Expression to query the datastore</param>
+            <returns>IQueryable of read operation</returns>
+        </member>
+        <member name="M:Genesys.Framework.Repository.StoredProcedureWriter`1.Update(`0)">
+            <summary>
+            Update the object
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.StoredProcedureWriter`1.Save(`0)">
+            <summary>
+            Worker that saves this object with automatic tracking.
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.StoredProcedureWriter`1.Delete(`0)">
+            <summary>
+            Deletes operation on this entity
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.StoredProcedureWriter`1.ConnectionStringGet">
+            <summary>
+            Gets connection strings from connectionstrings.config
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Repository.StoredProcedureWriter`1.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            Set values when creating a model in the database
+            </summary>
+            <param name="modelBuilder"></param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Genesys.Framework.Repository.ValueReader`1">
+            <summary>
+            EF DbContext for read-only GetBy* operations
+            </summary>
+            <summary>
+            EF DbContext for read-only GetBy* operations
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Repository.ValueReader`1.DatabaseAdapter">
+            <summary>
+            Configuration class for dbContext options
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Repository.ValueReader`1.Results">
+            <summary>
+            Results from any query operation
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Repository.ValueReader`1.ThrowException">
+            <summary>s
+            Class will throw exception if encountered
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Repository.ValueReader`1.CanConnect">
+            <summary>
+            Can connect to database?
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.ValueReader`1.#ctor(Genesys.Framework.Data.IValueAdapter{`0})">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.ValueReader`1.GetAll">
+            <summary>
+            All data in this datastore subset
+             Can add clauses, such as GetAll().Take(1), GetAll().Where(), etc.
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.ValueReader`1.GetAllExcludeDefault">
+            <summary>
+            All data in this datastore subset, except records with default Id/Key
+             Criteria: Where Id != TypeExtension.DefaultInteger And Also Key != TypeExtension.DefaultGuid
+             Goal: To exclude "Not Selected" records from lookup tables
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.ValueReader`1.GetByKey(System.Guid)">
+            <summary>
+            Gets database record with exact Key match
+            </summary>
+            <param name="key">Database Key of the record to pull</param>
+            <returns>Single entity that matches by Key, or an empty entity for not found</returns>
+        </member>
+        <member name="M:Genesys.Framework.Repository.ValueReader`1.GetByWhere(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Retrieves data with purpose of displaying results over multiple pages (i.e. in Grid/table)
+            </summary>
+            <param name="whereClause">Expression for where clause</param>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Repository.ValueReader`1.GetByPage(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32)">
+            <summary>
+            Retrieves data with purpose of displaying results over multiple pages (i.e. in Grid/table)
+            </summary>
+            <param name="whereClause">Expression for where clause</param>
+            <param name="orderByClause">Expression for order by clause</param>
+            <param name="pageSize">Size of each result</param>
+            <param name="pageNumber">Page number</param>
+            <returns></returns>
+        </member>
+        <member name="P:Genesys.Framework.Repository.ValueReader`1.Data">
+            <summary>
+            Data set DbSet class that gets/saves the Value.
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.ValueReader`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Genesys.Framework.Repository.ValueReader`1.#ctor(System.String)">
+            <summary>
+            Constructor. Explicitly set database connection.
+            </summary>
+            <param name="connectionString">Connection String to be used for this object data access</param>
+        </member>
+        <member name="M:Genesys.Framework.Repository.ValueReader`1.ConnectionStringGet">
+            <summary>
+            Gets connection strings from connectionstrings.config
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genesys.Framework.Repository.ValueReader`1.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            Set values when creating a model in the database
+            </summary>
+            <param name="modelBuilder"></param>
+            <remarks></remarks>
+        </member>
+        <member name="T:Genesys.Framework.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Genesys.Framework.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
