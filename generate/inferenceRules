@@ -1,0 +1,7 @@
+function modusPonens(f::String, g::String)::String
+	for i in 1:(length(g)-length(f))
+    	if (encode(g[i, length(f)]) == encode(f)) && (g[i + length(f)] == '→')
+			return g[i + length(f) + 1, length(g)-1]
+		end
+	end
+end
